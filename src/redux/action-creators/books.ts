@@ -10,7 +10,7 @@ const onebook:book = {
     discription: 'Ну норм такая книжка (с) леш',
     rating: 9,
     subjectOpinion: 'почему пары с Куделиным идут по 6 часов?',
-}
+};
 
 export const fetchBooks = () => {
     return async function(dispatch: Dispatch<fetchBookAction>) {
@@ -18,12 +18,12 @@ export const fetchBooks = () => {
             dispatch({type: fetchBooksActions.FETCH_BOOKS});
             // const responce: book[] = await axios.get(url);
             // dispatch({type:fetchBooksActions.FETCH_BOOKS_SUCCESS, payload: responce});
-            //throw new Error()
+            //throw new Error();
             setTimeout(() => {
                 dispatch({type:fetchBooksActions.FETCH_BOOKS_SUCCESS, payload: [onebook]});
-            }, 1500)
+            }, 1500);
         } catch (e) {
-            dispatch({type: fetchBooksActions.FETCH_BOOKS_ERROR, payload: 'Соси член (ошибка)'})
+            dispatch({type: fetchBooksActions.FETCH_BOOKS_ERROR, payload: 'Соси член (ошибка)'});
         }
-    }
-}
+    };
+};

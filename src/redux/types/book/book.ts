@@ -9,6 +9,7 @@ export type book = {
     author: string;
     discription: string;
     subjectOpinion: string;
+    rating: number;
 }
 
 export interface booksState {

@@ -1,0 +1,72 @@
+header {
+  width: 100%;
+  background-color: $main-green;
+  //flex: 0 0 auto;
+
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .header-navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.logo {
+  background-image: url("../../images/book.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+  margin-top: .4rem;
+}
+
+nav {
+  a {
+    @extend %nav-links;
+  }
+
+  a:hover {
+    @extend %nav-links-hover;
+  }
+
+}
+
+.user-actions {
+  a {
+    @extend %nav-links;
+
+  }
+  :hover {
+    @extend %nav-links-hover;
+  }
+
+}
+
+%nav-links-hover {
+  color: $font-color-black;
+  background-color: $font-color-white;
+
+}
+
+%nav-links {
+  font-family: 'Raleway', sans-serif;
+  display: inline-block;
+  padding: 10px;
+  font-size: 22px;
+  text-decoration: none;
+  color: $font-color-white;
+  text-align: center;
+  transition: all .3s ease;
+
+  :active {
+    color: $font-color-black;
+    background-color: $font-color-white;
+  }
+}

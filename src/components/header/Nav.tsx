@@ -1,15 +1,22 @@
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+import BookSvg from '../../images/book.png';
 
 export const Nav: React.FC = () => {
 
     return (
-        <header className={'header__container'}>
-            <nav className={'header-navigation'}>
-                <Link to={'/'}>Главная</Link>
-                <Link to={'/books'}>Главная</Link>
-                <Link to={'/calc'}>Главная</Link>
-            </nav>
-            <div className={'header-logo'}></div>
+        <header >
+            <div className={'container'}>
+                <nav className={'header-navigation'}>
+                    <div className={'logo'}></div>
+                    <Link to={'/'}>Главная</Link>
+                    <Link to={'/books'}>Каталог</Link>
+                    <Link to={'/calc'}>Канкулятор анжуманий</Link>
+                </nav>
+                <div className={'user-actions'}>
+                    <Link to={'/auth'}>Войти</Link>
+                    <Link to={'/reg'}>Зарегистрироваться</Link>
+                </div>
+            </div>
         </header>
     );
 };

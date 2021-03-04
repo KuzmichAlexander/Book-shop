@@ -1,16 +1,48 @@
+$background-color: #fffffb;
+$font-color-white: #fffffb;
+$font-color-black: #333;
+$main-green: #28B463;
+$main-yellow: #FFC300;
+$main-red: #FF5733;
+
+@import 'components/main/main';
+@import 'components/header/header';
+@import 'components/footer/footer';
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background-color: #333344;
+  background-color: $background-color;
+  height: 100vh;
 }
 
-span {
-  font-size: 72px;
-  color: #fff;
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 95%;
+  }
+}
+
+
+//span {
+//  font-size: 72px;
+//  color: #fff;
+//}
 
 

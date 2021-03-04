@@ -1,10 +1,12 @@
+import React from "react";
 
-
-export const Nav: React.FC = () => {
-
+export const Footer: React.FC = () => {
     return (
         <footer>
-           <div>created by sanay152</div>
+            <div className={'container'}>
+                <div className={'social'}>vk</div>
+                <div className={'discription'}>created by sanay152</div>
+            </div>
         </footer>
     );
 };

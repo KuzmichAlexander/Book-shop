@@ -1,11 +1,50 @@
-
+import landing from '../../images/landing/landing.jpg';
+import {Link} from "react-router-dom";
+import brain from '../../images/landing/brain.svg';
+import concentration from '../../images/landing/concentration.svg';
+import cake from '../../images/landing/cake.svg';
 
 export const Home: React.FC = () => {
 
     return (
-        <div>
-            HOME
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, at autem dolores doloribus eligendi et inventore ipsum minima molestias natus, necessitatibus obcaecati placeat quas qui quos rerum sequi sint, sunt? Distinctio, ducimus et excepturi in iste laborum nam reiciendis rerum temporibus voluptas! Atque culpa enim eos impedit neque perspiciatis quo, sunt vel veniam voluptatem. Alias doloremque exercitationem facere facilis id labore, minima modi nisi odit quo. A aut blanditiis commodi corporis culpa, cupiditate delectus dicta exercitationem harum ipsam, ipsum minima minus molestias, nobis nostrum quam qui saepe voluptate! Adipisci aperiam dolor dolorem, dolores ea error, exercitationem itaque magni nihil non obcaecati perferendis quis repellendus similique, soluta voluptate voluptates? Asperiores aut dignissimos inventore, iste magnam nemo omnis veritatis. Aliquam animi cupiditate hic impedit itaque mollitia natus quasi ratione? Cupiditate distinctio facilis hic illum laudantium quis similique. Alias animi asperiores, at cupiditate delectus dicta dignissimos doloribus est facilis impedit libero obcaecati officiis praesentium quae quas qui quia, quidem quisquam quod recusandae repellendus sequi temporibus tenetur unde vero. Accusantium amet dolorum expedita iusto laborum nesciunt perferendis repudiandae, voluptatum! Autem dolor et, harum in minima natus non provident quis rem repellendus, repudiandae sapiente suscipit, tempora vero voluptas. Aspernatur facere odio perferendis porro sequi suscipit.</p>
-        </div>
+        <>
+            <div className={'landing-wrapper'}>
+                <img src={landing} className={'landing-image'} alt="image-with-books"/>
+                <div className={'container'}>
+                    <div className={'landing-center'}>
+                        <h1>Познай всю силу книг</h1>
+                        <br/>
+                        <h2>Прямо сейчас</h2>
+                    </div>
+                    <div className={'landing-bottom'}>
+                        <span className={'bite-to-buy'}>выбери книгу на свой вкус и цвет на WILDBOOKI</span>
+                        <Link className={'link-button'} to={'/books'}>Каталог</Link>
+                    </div>
+                </div>
+            </div>
+            <div className={'container'}>
+                <div className={'landing-about'}>
+                    <h1>Почему именно книги?</h1>
+                    <div className={'landing-reasons'}>
+                        <div className={'landing-reason'}>
+                            <img style={{width: '150px', height: '150px', opacity: '0.4'}} src={brain} alt="мозгусики"/>
+                            <h3>развивает мышление</h3>
+                            <p>блягодаря книгам, мозг начнёт работать в полную силу и вам откроется безграничный простор бесконечно вечно фрактального подобия</p>
+                        </div>
+                        <div className={'landing-reason'}>
+                            <img style={{width: '150px', height: '150px', opacity: '0.4'}} src={concentration} alt="мозгусики"/>
+                            <h3>повышает концентрацию</h3>
+                            <p>научно доказано, что чтение книг усиливает концентрацию на одной вещи в разы</p>
+                        </div>
+                        <div className={'landing-reason'}>
+                            <img style={{width: '150px', height: '150px', opacity: '0.4'}} src={cake} alt="мозгусики"/>
+                            <h3>обычный тортик</h3>
+                            <p>не знаю что вставить третьим пунктом, вставлю тортик :)</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </>
     );
 };

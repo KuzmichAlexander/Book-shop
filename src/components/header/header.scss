@@ -1,6 +1,9 @@
 header {
   width: 100%;
   background-color: $main-green;
+  position: fixed;
+  z-index: 10;
+  opacity: .8;
   //flex: 0 0 auto;
 
 
@@ -18,7 +21,7 @@ header {
 }
 
 .logo {
-  background-image: url("../../images/book.png");
+  background-image: url("../../images/landing/book.png");
   background-size: contain;
   background-repeat: no-repeat;
   width: 40px;
@@ -52,7 +55,6 @@ nav {
 %nav-links-hover {
   color: $font-color-black;
   background-color: $font-color-white;
-
 }
 
 %nav-links {
@@ -60,13 +62,12 @@ nav {
   display: inline-block;
   padding: 10px;
   font-size: 22px;
-  text-decoration: none;
   color: $font-color-white;
   text-align: center;
-  transition: all .3s ease;
+  transition: $main-transition;
 
-  :active {
-    color: $font-color-black;
-    background-color: $font-color-white;
-  }
+  //:active {
+  //  color: $font-color-black;
+  //  background-color: $font-color-white;
+  //}
 }

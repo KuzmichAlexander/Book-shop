@@ -1,5 +1,4 @@
 import {Link} from 'react-router-dom';
-import BookSvg from '../../images/book.png';
 
 export const Nav: React.FC = () => {
 

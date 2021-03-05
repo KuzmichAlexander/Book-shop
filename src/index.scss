@@ -1,9 +1,10 @@
 $background-color: #fffffb;
 $font-color-white: #fffffb;
 $font-color-black: #333;
-$main-green: #28B463;
+$main-green: #199b50;
 $main-yellow: #FFC300;
 $main-red: #FF5733;
+$main-transition: all .3s ease;
 
 @import 'components/main/main';
 @import 'components/header/header';
@@ -13,8 +14,15 @@ $main-red: #FF5733;
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, p {
+  color: $font-color-black;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
@@ -37,12 +45,32 @@ body {
   .container {
     width: 95%;
   }
+
+}
+
+@media (max-width: 1080px) {
+  .landing-center h1, h2, .landing-about h1 {
+    font-size: 2.2rem !important;
+    letter-spacing: normal;
+  }
+
+}
+
+@media (max-width: 770px) {
+  .landing-center h1, h2, .landing-about h1 {
+    font-size: 30px !important;
+    letter-spacing: normal;
+  }
+}
+
+@media (max-width: 350px) {
+  .landing-center h1, h2, .landing-about h1 {
+    font-size: 20px !important;
+    letter-spacing: normal;
+  }
 }
 
 
-//span {
-//  font-size: 72px;
-//  color: #fff;
-//}
+
 
 

@@ -3,7 +3,7 @@ header {
   background-color: $main-green;
   position: fixed;
   z-index: 10;
-  opacity: .8;
+  opacity: .97;
   //flex: 0 0 auto;
 
 
@@ -24,8 +24,9 @@ header {
   background-image: url("../../images/landing/book.png");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 40px;
-  height: 40px;
+  height: 35px;
+  width: 35px;
+  position: relative;
   margin-right: 1rem;
   margin-top: .4rem;
 }
@@ -34,7 +35,6 @@ nav {
   a {
     @extend %nav-links;
   }
-
   a:hover {
     @extend %nav-links-hover;
   }
@@ -44,12 +44,10 @@ nav {
 .user-actions {
   a {
     @extend %nav-links;
-
   }
-  :hover {
+  a:hover {
     @extend %nav-links-hover;
   }
-
 }
 
 %nav-links-hover {
@@ -61,7 +59,7 @@ nav {
   font-family: 'Raleway', sans-serif;
   display: inline-block;
   padding: 10px;
-  font-size: 22px;
+  font-size: 20px;
   color: $font-color-white;
   text-align: center;
   transition: $main-transition;

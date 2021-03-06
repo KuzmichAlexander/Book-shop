@@ -1,8 +1,8 @@
-import landing from '../../images/landing/landing.jpg';
+import landing from '../../../images/landing/landing.jpg';
 import {Link} from "react-router-dom";
-import brain from '../../images/landing/brain.svg';
-import concentration from '../../images/landing/concentration.svg';
-import cake from '../../images/landing/cake.svg';
+import brain from '../../../images/landing/brain.svg';
+import concentration from '../../../images/landing/concentration.svg';
+import cake from '../../../images/landing/cake.svg';
 
 export const Home: React.FC = () => {
 

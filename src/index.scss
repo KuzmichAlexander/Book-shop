@@ -6,9 +6,10 @@ $main-yellow: #FFC300;
 $main-red: #FF5733;
 $main-transition: all .3s ease;
 
-@import 'components/main/main';
+@import 'components/main/landing/main';
 @import 'components/header/header';
 @import 'components/footer/footer';
+@import 'components/main/catalog/catalog';
 
 
 * {

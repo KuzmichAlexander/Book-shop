@@ -8,7 +8,7 @@ export const Nav: React.FC = () => {
                 <nav className={'header-navigation'}>
                     <div className={'logo'}></div>
                     <Link to={'/'}>Главная</Link>
-                    <Link to={'/books'}>Каталог</Link>
+                    <Link to={'/catalog'}>Каталог</Link>
                     <Link to={'/calc'}>Канкулятор анжуманий</Link>
                 </nav>
                 <div className={'user-actions'}>

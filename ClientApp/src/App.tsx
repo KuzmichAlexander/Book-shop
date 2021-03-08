@@ -6,11 +6,13 @@ import {useActions} from "./hooks/useActions";
 import {Footer} from "./components/footer/Footer";
 
 function App() {
-    // const state = useTypeSelector(state => state.fetchBook);
-    // const { fetchBooks } = useActions()
-    // useEffect(() => {
-    //     fetchBooks();
-    // }, []);
+    const state = useTypeSelector(state => state);
+    const { userAuth, fetchBooks } = useActions()
+    useEffect(() => {
+        fetchBooks();
+        userAuth();
+
+    }, []);
 
     //console.log(state)
     return (

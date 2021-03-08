@@ -12,6 +12,7 @@ export const Catalog: React.FC = () => {
                 <div className={'filter'}>
                     <Filter name={name} setName={setName}/>
                 </div>
+
                 <div className={'books'}></div>
             </div>
 

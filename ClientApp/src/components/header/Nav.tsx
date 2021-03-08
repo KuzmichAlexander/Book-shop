@@ -1,6 +1,17 @@
 import {Link} from 'react-router-dom';
+import {useTypeSelector} from "../../hooks/useTypeSelector";
+import {useState} from "react";
+import {UserShortInfo} from "../main/modals/UserShortInfo";
 
 export const Nav: React.FC = () => {
+    const userName = useTypeSelector(state => state.authUser.name);
+    const [userShortInfo, setUserShortInfo] = useState<boolean>(false);
+
+    const showUserWindow = () => {
+        setUserShortInfo(!userShortInfo);
+        console.log('show');
+    }
+
 
     return (
         <header >
@@ -11,10 +22,16 @@ export const Nav: React.FC = () => {
                     <Link to={'/catalog'}>Каталог</Link>
                     <Link to={'/calc'}>Канкулятор анжуманий</Link>
                 </nav>
-                <div className={'user-actions'}>
+                {userName ?
+                    <div className={'user-actions'}>
+                        <Link onClick={showUserWindow} to={'/auth'}>{userName}</Link>
+                        {userShortInfo ? <UserShortInfo /> : null}
+                    </div>
+                    : <div className={'user-actions'}>
                     <Link to={'/auth'}>Войти</Link>
-                    <Link to={'/reg'}>Зарегистрироваться</Link>
-                </div>
+                    <Link to={'/registration'}>Зарегистрироваться</Link>
+                </div>}
+
             </div>
         </header>
     );

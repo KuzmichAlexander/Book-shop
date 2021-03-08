@@ -10,6 +10,8 @@ $main-transition: all .3s ease;
 @import 'components/header/header';
 @import 'components/footer/footer';
 @import 'components/main/catalog/catalog';
+@import 'components/main/regAuth/reg_auth';
+@import 'components/main/modals/modals';
 
 
 * {
@@ -41,6 +43,8 @@ body {
   width: 1280px;
   margin: 0 auto;
 }
+
+
 
 @media (max-width: 1280px) {
   .container {

@@ -5,6 +5,5 @@ import ActionCreator from "../redux/action-creators";
 
 export const useActions = () => {
     const dispatch = useDispatch();
-    console.log(ActionCreator)
     return bindActionCreators(ActionCreator, dispatch);
 };

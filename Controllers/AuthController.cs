@@ -1,87 +1,32 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BookShop.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace BookShop.Controllers
 {
+    [Route("api/[controller]")]
+    [ApiController]
     public class AuthController : Controller
     {
         // GET: AuthController
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        // GET: AuthController/Details/5
-        public string Details(int id)
-        {
-            return "5";
-        }
-
-        // GET: AuthController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: AuthController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public UserAuthData Post(UserAuth ua)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+            UserAuthData uad = new UserAuthData();
+            
+                
+                uad.Email = "Kozyavkov2332@mail.ru";
+                uad.Login = "Kozyavkov23";
 
-        // GET: AuthController/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
+                uad.Name = "Константин";
 
-        // POST: AuthController/Edit/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
+                uad.Surname = "Гибон";
+                uad.Token = "sdfaTKTTJ54okOKT4wfefew24tr4wwffgRFGLGPrg34";
 
-        // GET: AuthController/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
 
-        // POST: AuthController/Delete/5
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+               
+
+            return uad;
+            
         }
     }
 }

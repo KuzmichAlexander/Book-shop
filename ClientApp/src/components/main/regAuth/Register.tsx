@@ -38,7 +38,7 @@ export const Register = () => {
     }
 
     return (
-        <div>
+        <div className={'auth-container'}>
             <form onSubmit={registrationUser}>
                 <h1>Регистрация</h1>
                 <br/>

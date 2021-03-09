@@ -13,9 +13,7 @@ export const Main: React.FC = () => {
                 <Route exact path='/calc' component={Calc}/>
                 <Route exact path='/catalog' component={Catalog}/>
             </div>
-            <div className={'auth-container'}>
-                <Route exact path='/registration' component={Register}/>
-            </div>
+            <Route exact path='/registration' component={Register}/>
         </main>
     );
 };
